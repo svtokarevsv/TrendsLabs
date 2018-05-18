@@ -1,3 +1,1 @@
-some description
-added new row
-added third
+repository for labs on Trends In WebDev

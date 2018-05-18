@@ -32,18 +32,18 @@ document.getElementById('button--birthday').addEventListener('click',function (e
         document.getElementById('p--birthday-message').innerHTML=getBirthDayMessage(bDate)
     }
 })
-function getBirthDayMessage(birthDate:Date){
+function getBirthDayMessage(birthDate:Date):string{
     let today:Date = new Date()
     if(today.getMonth()===birthDate.getMonth()&&today.getDate()===birthDate.getDate()){
         return 'Happy birthday!'
     }
-    let nextBirthDate = new Date(today.getFullYear(),birthDate.getMonth(),birthDate.getDate())
+    let nextBirthDate:Date = new Date(today.getFullYear(),birthDate.getMonth(),birthDate.getDate())
     if(nextBirthDate<today){
         nextBirthDate = new Date(today.getFullYear()+1,birthDate.getMonth(),birthDate.getDate())
     }
     return `Your birthday will be on ${days[nextBirthDate.getDay()]} ${months[nextBirthDate.getMonth()]} ${nextBirthDate.getDate()}, ${nextBirthDate.getFullYear()}`
 }
-function parseDate(str) {
+function parseDate(str):Date {
     const mdy = str.split('-');
     return new Date(mdy[0], mdy[1]-1, mdy[2]);
 }

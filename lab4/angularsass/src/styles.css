@@ -1,0 +1,33 @@
+.expanding-nav{
+    list-style:none;
+    font-size: 1.5rem;
+    padding-left: 0;
+}
+.expanding-nav li{
+    display: inline-block;
+    position: relative;
+    margin-right: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.expanding-nav .expanding-nav{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.expanding-nav .expanding-nav>li{
+    font-size:1.2rem;
+    margin-right: 0;
+    background-color: #c8c8c8;
+}
+.expanding-nav li:hover>.expanding-nav{
+    display: block;
+}
+.expanding-nav .expanding-nav li{
+    display: block;
+}
+.expanding-nav .expanding-nav .expanding-nav{
+    left: 100%;
+    top: 0;
+}

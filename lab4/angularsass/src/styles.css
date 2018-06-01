@@ -14,15 +14,18 @@
     display: none;
     position: absolute;
     left: 0;
-    width: 100%;
+    width: fit-content;
 }
 .expanding-nav .expanding-nav>li{
     font-size:1.2rem;
     margin-right: 0;
     background-color: #c8c8c8;
+    min-width: fit-content;
+    width:100%;
 }
 .expanding-nav li:hover>.expanding-nav{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .expanding-nav .expanding-nav li{
     display: block;

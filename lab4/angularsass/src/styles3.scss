@@ -1,0 +1,36 @@
+.expanding-nav {
+  list-style: none;
+  font-size: 1.5rem;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    &:hover > .expanding-nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .expanding-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: fit-content;
+    li {
+      display: block;
+    }
+    & > li {
+      font-size: 1.2rem;
+      margin-right: 0;
+      background-color: #c8c8c8;
+      min-width: fit-content;
+      width: 100%;
+    }
+    .expanding-nav {
+      left: 100%;
+      top: 0;
+    }
+  }
+}
